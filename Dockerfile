@@ -3,7 +3,8 @@ WORKDIR /src
 COPY composer.* ./
 
 # Install composer, refer: https://github.com/geshan/docker-php-composer-alpine/blob/master/Dockerfile
-RUN apk --update add wget \ 
+RUN apk update && \
+    apk --update add wget \ 
 		     curl \
 		     git \
 		     php7 \
